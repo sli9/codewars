@@ -6,14 +6,11 @@
 </head>
 <body>
 <script>
-    function century(year) {
-        if (year%100 === 0){
-            return Math.floor(year/100)
-        } else  return  Math.floor(year/100+1)
-
+    function litres(time) {
+        return time.toString().split('').reverse().map(t=>Number(t));
     }
 
-    console.log(century(2000))
+    console.log(litres(35231))
 </script>
 </body>
 </html>
