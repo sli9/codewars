@@ -6,12 +6,11 @@
 </head>
 <body>
 <script>
-    function fakeBin(x){
-       return  x.split('').map(i => i<5 ? '0' : '1').join('')
-
+    function disemvowel(str) {
+        return str.replace(/[aeiou]/gi, '');
     }
 
-    console.log(fakeBin('45385593107843568'))
+    console.log(disemvowel("This website is for losers LOL!"))
 </script>
 </body>
 </html>
