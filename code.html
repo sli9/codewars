@@ -6,18 +6,17 @@
 </head>
 <body>
 <script>
-    function sc(screws) {
-        let ms = 1;
-        // return screws.split('').reduce((time, screw, i) => screw == screws[i+1] ? time + 2 : time + 7, 1) - 7; -7,because last screws[i+1] would be over the array
-        for (let i = 0; i<screws.length-1; i++) {
-            if (screws[i] != screws[i+1]) {
-                ms+=1+5+1
-            } else ms+=1+1
-        }
-        return ms
+    function solution(nums) {
+        if (nums === null) {
+            return []
+        } else if (nums.length === 0) return []
+        return nums.sort((a,b) => {
+          return   a-b
+        })
+        //(nums || []).sort((a,b) => { return a-b})
     }
 
-    console.log(sc("---+++"))
+    console.log(solution(null))
 </script>
 </body>
 </html>
